@@ -19,9 +19,9 @@ export default class Tour extends Component {
     return (
       <article className="tour">
         <div className="img-container">
-          <img src={img} alt="image of the tour" />
-          <span className="close-btn">
-            <i className="fas fa-window-close" onClick={removeTour}></i>
+          <img src={img} alt="tour" />
+          <span className="close-btn" onClick={() => removeTour(id)}>
+            <i className="fas fa-window-close"></i>
           </span>
         </div>
         <div className="tour-info">
@@ -30,7 +30,7 @@ export default class Tour extends Component {
           <h5>info <span onClick={this.handleInfo}><i className="fas fa-caret-square-down"></i></span></h5>
           {this.state.showInfo && <p>{info}</p>}
         </div>
-      </article>
+      </article >
     )
   }
 }
